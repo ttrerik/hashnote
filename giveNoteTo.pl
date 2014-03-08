@@ -22,7 +22,7 @@ sub getValue{
         my $res = 0;
         foreach (@_) {
                 for(my $i=0; $i < length($_); $i++){
-                        $res = $res + ord(substr($_,$i));
+                        $res +=  ord(substr($_,$i));
                 }
         }
         return 10+($res%11);
@@ -57,3 +57,4 @@ sub testKo{
         print "KO\n";
         print color 'reset';
 }
+
